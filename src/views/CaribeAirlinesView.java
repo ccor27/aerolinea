@@ -44,11 +44,11 @@ public class CaribeAirlinesView {
 	 */
 	protected void createContents() {
 		shell = new Shell();
-		shell.setSize(726, 476);
+		shell.setSize(733, 534);
 		shell.setText("SWT Application");
 
 		TabFolder tabFolder = new TabFolder(shell, SWT.NONE);
-		tabFolder.setBounds(10, 10, 692, 416);
+		tabFolder.setBounds(10, 10, 720, 496);
 
 		TabItem tbtmGestionDeTripulacion = new TabItem(tabFolder, SWT.NONE);
 		tbtmGestionDeTripulacion.setText("Gestion De Tripulacion");
@@ -58,6 +58,9 @@ public class CaribeAirlinesView {
 
 		TabItem tbtmCompraDeTiquete = new TabItem(tabFolder, SWT.NONE);
 		tbtmCompraDeTiquete.setText("Compra de Tiquete");
+
+		Composite compositeTiquete = new CompraTiquete(tabFolder, SWT.NONE);
+		tbtmCompraDeTiquete.setControl(compositeTiquete);
 
 	}
 }

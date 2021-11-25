@@ -54,13 +54,19 @@ public class CaribeAirlines {
 			String direccionResidencia, Tarjeta tarjeta, Equipaje equipaje, Tiquete tiquete){
 		
 		if(verificarCliente(nombre)==false){
-			Cliente cliente = new Cliente(identificacion, nombre, direccion, correoElectronico, apellido, direccionResidencia, tarjeta, equipaje, tiquete);
+			Cliente cliente = new Cliente(identificacion, nombre, direccion, correoElectronico, apellido, direccionResidencia, tarjeta, equipaje);
 			listaClientes.add(cliente);
 			return true;//se creo y agrego el cliente
 		}else{
 			return false;//el cliente ya existe
 		}
 
+	}
+	
+	public boolean comprarTiquete(Vuelo vuelo, TipoClase tipoClase, String fechaInicio,
+			String fechaRegreso, Cliente cliente){	
+		Tiquete t = new Tiquete(vuelo, tipoClase, fechaInicio, fechaRegreso, cliente);
+		return true;
 	}
 	
 	/**

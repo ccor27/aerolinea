@@ -2,45 +2,81 @@ package model;
 
 public class Tiquete {
 
-	private Ciudad ciudadOrigen;
-	private Ciudad ciudadDestino;
+
+	private String origen;
+	private String destino;
 	private TipoClase tipoClase;
 	private String fechaInicio;
 	private String fechaRegreso;
-	private int cantidadPersonasViajar;
 	private Cliente cliente;
+	private double costo;
+	private ModalidadVuelo modalidadVuelo;
+	private Vuelo vuelo;
 
 	//contructores
 
 	public Tiquete() {
 		super();
 	}
-	public Tiquete(Ciudad ciudadOrigen, Ciudad ciudadDestino, TipoClase tipoClase, String fechaInicio,
-			String fechaRegreso, int cantidadPersonasViajar, Cliente cliente) {
+	public Tiquete(Vuelo vuelo, TipoClase tipoClase, String fechaInicio,
+			String fechaRegreso, Cliente cliente) {
 		super();
-		this.ciudadOrigen = ciudadOrigen;
-		this.ciudadDestino = ciudadDestino;
+
+		this.vuelo=vuelo;
+		this.origen=vuelo.getRuta().getOrigen();
+		this.destino=vuelo.getRuta().getDestino();
 		this.tipoClase = tipoClase;
 		this.fechaInicio = fechaInicio;
 		this.fechaRegreso = fechaRegreso;
-		this.cantidadPersonasViajar = cantidadPersonasViajar;
 		this.cliente = cliente;
+		costoTiquete();
+
 	}
+	
+
+	public void costoTiquete(){
+		
+		if(tipoClase==TipoClase.ECONOMICA){
+			
+			if(vuelo.getTipoVuelo()==TipoVuelo.INTERNACIONA){
+				costo = 100000+(0.97*100000);
+			}else{
+				costo = 100000+(0.8*100000);
+			}
+		}else{
+			
+			if(vuelo.getTipoVuelo()==TipoVuelo.INTERNACIONA){
+				costo = 150000+(0.97*150000);
+			}else{
+				costo = 150000+(0.8*150000);
+			}
+			
+		}
+	}
+	
+	//100
 	//get y sets
-	public Ciudad getCiudadOrigen() {
-		return ciudadOrigen;
-	}
-	public void setCiudadOrigen(Ciudad ciudadOrigen) {
-		this.ciudadOrigen = ciudadOrigen;
-	}
-	public Ciudad getCiudadDestino() {
-		return ciudadDestino;
-	}
-	public void setCiudadDestino(Ciudad ciudadDestino) {
-		this.ciudadDestino = ciudadDestino;
-	}
+
 	public TipoClase getTipoClase() {
 		return tipoClase;
+	}
+	public String getOrigen() {
+		return origen;
+	}
+	public void setOrigen(String origen) {
+		this.origen = origen;
+	}
+	public String getDestino() {
+		return destino;
+	}
+	public void setDestino(String destino) {
+		this.destino = destino;
+	}
+	public Vuelo getVuelo() {
+		return vuelo;
+	}
+	public void setVuelo(Vuelo vuelo) {
+		this.vuelo = vuelo;
 	}
 	public void setTipoClase(TipoClase tipoClase) {
 		this.tipoClase = tipoClase;
@@ -57,19 +93,22 @@ public class Tiquete {
 	public void setFechaRegreso(String fechaRegreso) {
 		this.fechaRegreso = fechaRegreso;
 	}
-	public int getCantidadPersonasViajar() {
-		return cantidadPersonasViajar;
-	}
-	public void setCantidadPersonasViajar(int cantidadPersonasViajar) {
-		this.cantidadPersonasViajar = cantidadPersonasViajar;
-	}
 	public Cliente getCliente() {
 		return cliente;
 	}
 	public void setCliente(Cliente cliente) {
 		this.cliente = cliente;
 	}
-
+	
+	@Override
+	public String toString() {
+		return "Tiquete [origen=" + origen + ", destino=" + destino + ", tipoClase=" + tipoClase + ", fechaInicio="
+				+ fechaInicio + ", fechaRegreso=" + fechaRegreso + ", cliente=" + cliente + ", costo=" + costo
+				+ ", modalidadVuelo=" + modalidadVuelo + ", vuelo=" + vuelo + "]";
+	}
+	
+	
+	
 
 
 }

@@ -5,7 +5,6 @@ import java.util.ArrayList;
 public class Aeronave {
 
 	private TipoNave tipoNave;
-	
 	private Tripulantes tripulantes;
 	private int numeroPasajeros;
 	private double capacidadKg;

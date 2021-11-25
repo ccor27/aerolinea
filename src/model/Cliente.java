@@ -10,13 +10,13 @@ public class Cliente extends Persona {
 
 	//contrsuctores
 	public Cliente(String identificacion, String nombre, String direccion, String correoElectronico, String apellido,
-			String direccionResidencia, Tarjeta tarjeta, Equipaje equipaje, Tiquete tiquete) {
+			String direccionResidencia, Tarjeta tarjeta, Equipaje equipaje) {
 		super(identificacion, nombre, direccion, correoElectronico);
 		this.apellido = apellido;
 		this.direccionResidencia = direccionResidencia;
 		this.tarjeta = tarjeta;
 		this.equipaje = equipaje;
-		this.tiquete = tiquete;
+		
 	}
 	public Cliente() {
 		super();
@@ -52,6 +52,11 @@ public class Cliente extends Persona {
 	}
 	public void setTiquete(Tiquete tiquete) {
 		this.tiquete = tiquete;
+	}
+	@Override
+	public String toString() {
+		return "Cliente [apellido=" + apellido + ", direccionResidencia=" + direccionResidencia + ", tarjeta=" + tarjeta
+				+ ", equipaje=" + equipaje + "]";
 	}
 
 

@@ -5,7 +5,16 @@ import java.util.Set;
 
 import model.Aeronave;
 import model.CaribeAirlines;
+import model.Cliente;
+import model.Equipaje;
+import model.Ruta;
+import model.Tarjeta;
+import model.TipoClase;
 import model.TipoNave;
+import model.TipoTarjeta;
+import model.TipoVuelo;
+import model.Tiquete;
+import model.Vuelo;
 import persistencia.ArchivoUtil;
 import persistencia.Persistencia;
 
@@ -42,13 +51,28 @@ public class ModelFactoryController {
 		System.out.println(caribeAirlines.agregarPiloto("10013698", "cristian", "osorio", "cris@gmail.com", "bachiller, aviacion en la universidad del quindio"));;
 		System.out.println(caribeAirlines.agregarPiloto("10013698", "cristian", "osorio", "cris@gmail.com", "bachiller, aviacion en la universidad del quindio"));
 		System.out.println(caribeAirlines.agregarPiloto("11365897", "yeferson", "zuluaga", "zuluaga@gmail.com", "bachiller, aviacion , medico"));
+	   Tarjeta t = new Tarjeta(TipoTarjeta.DEBITO, 1000000);
+	   Equipaje e = new Equipaje();
+	   Cliente c1 = new Cliente("1005085241", "x", "xxx","adsd.cpm", "xx","x",t,e);
+	   
 		
 		Aeronave aeronave1 = new Aeronave(TipoNave.AIRBUS_A320);
 		Aeronave aeronave2 = new Aeronave(TipoNave.AIRBUS_A330);
 		Aeronave aeronave3 = new Aeronave(TipoNave.BOEING_787);
+		
+		Ruta ruta = new Ruta("cmdx","bogota");
+		
+		Vuelo vuelo = new Vuelo(aeronave1,ruta,TipoVuelo.INTERNACIONA);
+		
+		Tiquete tiquete = new Tiquete(vuelo, TipoClase.ECONOMICA, "11-2-21", "12-3-22", c1);
+		c1.setTiquete(tiquete);
+		System.out.println(c1);
+		System.out.println(tiquete);
 		System.out.println(aeronave1);
 		System.out.println(aeronave2);
 		System.out.println(aeronave3);
+		
+		
 	/*	Set<Piloto> listaPilotos = new HashSet<Piloto>();
 		Piloto piloto = new Piloto("10013698", "cristian", "osorio", "cris@gmail.com", "bachiller, aviacion en la universidad del quindio");
 	//	caribeAirlines.getListaPilotos().add(piloto);
@@ -96,4 +120,11 @@ public class ModelFactoryController {
 		this.caribeAirlines = caribeAirlines;
 	}
 
+	public boolean comprarTiquete(Vuelo vuelo, TipoClase tipoClase, String fechaInicio,
+			String fechaRegreso, Cliente cliente){
+  
+		return caribeAirlines.comprarTiquete(vuelo, tipoClase, fechaInicio, fechaRegreso, cliente);
+	}
+	
+	
 }
