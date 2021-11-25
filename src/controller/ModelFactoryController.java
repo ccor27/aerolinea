@@ -4,9 +4,12 @@ import java.util.HashSet;
 import java.util.Set;
 
 import model.Aeronave;
+import model.Auxiliar;
 import model.CaribeAirlines;
 import model.Cliente;
+import model.CoPiloto;
 import model.Equipaje;
+import model.Piloto;
 import model.Ruta;
 import model.Tarjeta;
 import model.TipoClase;
@@ -125,6 +128,8 @@ public class ModelFactoryController {
   
 		return caribeAirlines.comprarTiquete(vuelo, tipoClase, fechaInicio, fechaRegreso, cliente);
 	}
-	
+	public void asignarTripulacion( Piloto piloto, CoPiloto coPiloto, Set<Auxiliar> listaAuxiliares , String codigoAeronave){
+		caribeAirlines.asignarTripulacion( piloto, coPiloto, listaAuxiliares, codigoAeronave);
+	}
 	
 }

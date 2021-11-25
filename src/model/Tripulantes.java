@@ -1,13 +1,14 @@
 package model;
 
 import java.util.ArrayList;
+import java.util.Set;
 
 public class Tripulantes {
 
 	private String codigoTripulacion;
 	private Piloto piloto;
 	private CoPiloto coPiloto;
-	private ArrayList<Auxiliar> listaAuxiliares;
+	private Set<Auxiliar> listaAuxiliares;
 
 
 	//constructor
@@ -16,10 +17,9 @@ public class Tripulantes {
 		super();
 	}
 
-	public Tripulantes(String codigoTripulacion, Piloto piloto, CoPiloto coPiloto,
-			ArrayList<Auxiliar> listaAuxiliares) {
+	public Tripulantes( Piloto piloto, CoPiloto coPiloto,
+			Set<Auxiliar> listaAuxiliares) {
 		super();
-		this.codigoTripulacion = codigoTripulacion;
 		this.piloto = piloto;
 		this.coPiloto = coPiloto;
 		this.listaAuxiliares = listaAuxiliares;
@@ -51,13 +51,15 @@ public class Tripulantes {
 		this.coPiloto = coPiloto;
 	}
 
-	public ArrayList<Auxiliar> getListaAuxiliares() {
+	public Set<Auxiliar> getListaAuxiliares() {
 		return listaAuxiliares;
 	}
 
-	public void setListaAuxiliares(ArrayList<Auxiliar> listaAuxiliares) {
+	public void setListaAuxiliares(Set<Auxiliar> listaAuxiliares) {
 		this.listaAuxiliares = listaAuxiliares;
 	}
+
+
 
 
 

@@ -13,7 +13,8 @@ public class CaribeAirlines {
 	private Set<CoPiloto> listaCoPilotos;
 	private Set<Auxiliar> listaAuxiliares;
 	private ArrayList<Cliente> listaClientes;
-
+	private  ArrayList<Aeronave> listaAeronaves;
+    private Set<Tripulantes> listaTripulas;
 
 
 
@@ -61,6 +62,33 @@ public class CaribeAirlines {
 			return false;//el cliente ya existe
 		}
 
+	}
+	
+	public void asignarTripulacion( Piloto piloto, CoPiloto coPiloto, Set<Auxiliar> listaAuxiliares , String codigoAeronave){
+
+		int posicionAeronave = buscarAeronave(codigoAeronave);
+
+		Tripulantes tripulantes = new Tripulantes(piloto, coPiloto, listaAuxiliares);
+
+		if(posicionAeronave >=0 ){
+
+			listaAeronaves.get(posicionAeronave).setTripulantes(tripulantes);
+		}
+
+	}
+
+	public int buscarAeronave(String codigoAeronave){
+
+		int posicion = -1;
+
+		for (int i = 0; i < listaAeronaves.size(); i++) {
+
+			if(listaAeronaves.get(i).equals(codigoAeronave)){
+				posicion=i;
+			}
+		}
+
+		return posicion;
 	}
 	
 	public boolean comprarTiquete(Vuelo vuelo, TipoClase tipoClase, String fechaInicio,
