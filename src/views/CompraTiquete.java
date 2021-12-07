@@ -4,9 +4,12 @@ import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Group;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.widgets.Label;
+import org.eclipse.swt.widgets.Shell;
 import org.eclipse.swt.widgets.Combo;
 
 import java.util.ArrayList;
+
+import javax.jws.soap.SOAPBinding.Style;
 
 import org.eclipse.jface.viewers.ComboViewer;
 import org.eclipse.swt.widgets.DateTime;
@@ -14,6 +17,7 @@ import org.eclipse.swt.widgets.Text;
 
 import controller.CompraDeTiqueteController;
 import controller.GestionDeTripulacionController;
+import model.Aeronave;
 import model.CaribeAirlines;
 import model.Persona;
 import model.Vuelo;
@@ -35,8 +39,9 @@ public class CompraTiquete extends Composite {
 	private Text txtNumPasajeros;
 	private Text txtinicio;
 	private Text txtRegreso;
-	private Table table;
+	private Table tblVuelos;
 	private ArrayList<Vuelo> vuelosDisponibles = new ArrayList<Vuelo>();
+	
 
 	/**
 	 * Create the composite.
@@ -111,10 +116,10 @@ public class CompraTiquete extends Composite {
 		grpVuelos.setBounds(26, 246, 617, 190);
 
 		TableViewer tableViewer = new TableViewer(grpVuelos, SWT.BORDER | SWT.FULL_SELECTION);
-		table = tableViewer.getTable();
-		table.setLinesVisible(true);
-		table.setHeaderVisible(true);
-		table.setBounds(10, 24, 597, 109);
+		tblVuelos = tableViewer.getTable();
+		tblVuelos.setLinesVisible(true);
+		tblVuelos.setHeaderVisible(true);
+		tblVuelos.setBounds(10, 24, 597, 109);
 
 		TableViewerColumn tableViewerColumn = new TableViewerColumn(tableViewer, SWT.NONE);
 		TableColumn tblclmnOrigen = tableViewerColumn.getColumn();
@@ -142,6 +147,19 @@ public class CompraTiquete extends Composite {
 		tblclmnAvion.setText("Avion");
 
 		Button btnSeleccionarPuestos = new Button(grpVuelos, SWT.NONE);
+		btnSeleccionarPuestos.addSelectionListener(new SelectionAdapter() {
+			@Override
+			public void widgetSelected(SelectionEvent e) {
+				
+				//sfdf
+				int num = tblVuelos.getSelectionIndex();
+				Vuelo vuelo = vuelosDisponibles.get(num);
+			    Asig a = new Asig();
+			    a.setNave(vuelo.getNave());
+			    a.open();
+			    
+			}
+		});
 		btnSeleccionarPuestos.setBounds(251, 151, 128, 25);
 		btnSeleccionarPuestos.setText("Seleccionar Puestos");
 
@@ -157,11 +175,11 @@ public class CompraTiquete extends Composite {
 	}
 
 	public void llenarTablaVuelos(){
-		table.removeAll();
+		tblVuelos.removeAll();
 
 		for (Vuelo vuelo: vuelosDisponibles) {
 
-			TableItem item1 = new TableItem(table, SWT.NONE);
+			TableItem item1 = new TableItem(tblVuelos, SWT.NONE);
 			item1.setText(new String[] {vuelo.getRuta().getOrigen(), vuelo.getRuta().getDestino(), vuelo.getFechaSalida(),
 					vuelo.getFechaSalida(),vuelo.getNave().getTipoNave().toString()});
 		}

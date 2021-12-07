@@ -139,6 +139,7 @@ public class Aeronave {
 	public void setCodigo(String codigo) {
 		this.codigo = codigo;
 	}
+	
 	@Override
 	public String toString() {
 		return "Aeronave [tipoNave=" + tipoNave + ", numeroPasajeros=" + numeroPasajeros + ", capacidadKg="
