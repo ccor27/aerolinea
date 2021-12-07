@@ -5,6 +5,7 @@ import java.util.ArrayList;
 public class Equipaje {
 
 	private ArrayList<Pieza> listaPiezas;
+	private static final long serialVersionUID = 1L;
 
 
 	//constructores

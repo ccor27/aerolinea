@@ -3,7 +3,7 @@ package model;
 public class CoPiloto extends Persona {
 
 	private String estudiosRealizados;
-
+	private static final long serialVersionUID = 1L;
 
 	//constructores
 

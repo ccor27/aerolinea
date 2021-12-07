@@ -2,6 +2,8 @@ package model;
 
 public class Silla {
 
+	private static final long serialVersionUID = 1L;
+
 	private String referencia;
 	private Estado estado;
 	private TipoClase tipoClase;

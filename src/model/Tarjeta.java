@@ -2,6 +2,8 @@ package model;
 
 public class Tarjeta {
 
+	private static final long serialVersionUID = 1L;
+
 	private TipoTarjeta tipoTarjeta;
 	private int saldo;
 

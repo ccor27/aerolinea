@@ -6,6 +6,7 @@ import model.Piloto;
 
 import java.util.Set;
 
+import model.Aeronave;
 import model.Auxiliar;
 
 public class GestionDeTripulacionController {
@@ -17,8 +18,8 @@ public class GestionDeTripulacionController {
 		modelFactoryController = ModelFactoryController.getInstance();
 		caribeAirlines = modelFactoryController.getCaribeAirlines();
 	}
-	public void asignarTripulacion( Piloto piloto, CoPiloto coPiloto, Set<Auxiliar> listaAuxiliares , String codigoAeronave){
-		modelFactoryController.asignarTripulacion( piloto, coPiloto, listaAuxiliares, codigoAeronave);
+	public void asignarTripulacion( Piloto piloto, CoPiloto coPiloto, Set<Auxiliar> listaAuxiliares , Aeronave aeronave){
+		modelFactoryController.asignarTripulacion( piloto, coPiloto, listaAuxiliares, aeronave);
 	}
 
 	public CaribeAirlines getCaribeAirlines() {

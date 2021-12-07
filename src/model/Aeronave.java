@@ -4,6 +4,9 @@ import java.util.ArrayList;
 
 public class Aeronave {
 
+	private static final long serialVersionUID = 1L;
+
+	private String codigo;
 	private TipoNave tipoNave;
 	private Tripulantes tripulantes;
 	private int numeroPasajeros;
@@ -16,19 +19,25 @@ public class Aeronave {
 
 
 
-	public Aeronave(TipoNave tipoNave) {
+
+	public Aeronave() {
+		super();
+	}
+	public Aeronave(String codigo ,TipoNave tipoNave) {
 		super();
 		//this.numeroPasajeros = numeroPasajeros;
 		//this.capacidadKg = capacidadKg;
 		//this.numEjecutivos = numEjecutivos;
 		//this.numEconnomicos = numEconnomicos;
+		this.codigo = codigo;
 		this.tipoNave=tipoNave;
 		caracteristicaNaveSegunTipo();
 	}
-	public Aeronave(Tripulantes tripulantes, int numeroPasajeros, double capacidadKg, int numEjecutivos,
+	public Aeronave(String codigo, Tripulantes tripulantes, int numeroPasajeros, double capacidadKg, int numEjecutivos,
 			int numEconnomicos, Silla[][] puestosEjecutivos, Silla[][] puestosEconomicos,
 			ArrayList<Equipaje> listaEquipajes) {
 		super();
+		this.codigo = codigo;
 		this.tripulantes = tripulantes;
 		this.numeroPasajeros = numeroPasajeros;
 		this.capacidadKg = capacidadKg;
@@ -38,10 +47,10 @@ public class Aeronave {
 		this.puestosEconomicos = puestosEconomicos;
 		this.listaEquipajes = listaEquipajes;
 	}
-	
+
 	//seleccion de caracteristicas de la nave segun su tipo
 	public void caracteristicaNaveSegunTipo(){
-		
+
 		if(tipoNave==TipoNave.AIRBUS_A320){
 			puestosEjecutivos = new Silla[6][6];
 			puestosEconomicos = new Silla[23][6];
@@ -67,7 +76,7 @@ public class Aeronave {
 			}
 		}
 	}
-	
+
 	//gets y sets
 	public Tripulantes getTripulantes() {
 		return tripulantes;
@@ -117,12 +126,25 @@ public class Aeronave {
 	public void setListaEquipajes(ArrayList<Equipaje> listaEquipajes) {
 		this.listaEquipajes = listaEquipajes;
 	}
+	public TipoNave getTipoNave() {
+		return tipoNave;
+	}
+	public void setTipoNave(TipoNave tipoNave) {
+		this.tipoNave = tipoNave;
+	}
+
+	public String getCodigo() {
+		return codigo;
+	}
+	public void setCodigo(String codigo) {
+		this.codigo = codigo;
+	}
 	@Override
 	public String toString() {
 		return "Aeronave [tipoNave=" + tipoNave + ", numeroPasajeros=" + numeroPasajeros + ", capacidadKg="
 				+ capacidadKg + ", numEjecutivos=" + numEjecutivos + ", numEconnomicos=" + numEconnomicos + "]";
 	}
 
-    
+
 
 }

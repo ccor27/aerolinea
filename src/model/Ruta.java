@@ -2,6 +2,7 @@ package model;
 
 public class Ruta {
 
+	private static final long serialVersionUID = 1L;
 
 	private String origen;
 	private String destino;
@@ -23,9 +24,9 @@ public class Ruta {
 	}
 
 	public void caracteristicasSegunOrigenDestino(String o, String d){
-		
+
 		if(o.equalsIgnoreCase("cdmx")){
-			
+
 			switch (d) {
 			case "Monterrey":
 				tiempoDuracion = "2(H) 45(M)";
@@ -60,9 +61,9 @@ public class Ruta {
 	}
 
 	//gets y sets
-   
-	
-	
+
+
+
 
 	public String getTiempoDuracion() {
 		return tiempoDuracion;

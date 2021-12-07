@@ -2,6 +2,8 @@ package model;
 
 public class Persona {
 
+	private static final long serialVersionUID = 1L;
+
 	private String identificacion;
 	private String nombre;
 	private String direccion;

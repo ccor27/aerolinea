@@ -2,6 +2,8 @@ package model;
 
 public class Pieza {
 
+	private static final long serialVersionUID = 1L;
+
 	private int peso;
 	private double alto;
 	private double largo;

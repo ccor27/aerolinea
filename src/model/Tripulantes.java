@@ -5,6 +5,7 @@ import java.util.Set;
 
 public class Tripulantes {
 
+	private static final long serialVersionUID = 1L;
 	private String codigoTripulacion;
 	private Piloto piloto;
 	private CoPiloto coPiloto;

@@ -4,6 +4,8 @@ import java.util.ArrayList;
 
 public class Flota {
 
+	private static final long serialVersionUID = 1L;
+
 	private ArrayList<Aeronave> listaAeronaves;
 	private TipoRuta tipoRuta;
 

@@ -2,6 +2,8 @@ package model;
 
 public class Cliente extends Persona {
 
+	private static final long serialVersionUID = 1L;
+
 	private String apellido;
 	private String direccionResidencia;
 	private Tarjeta tarjeta;
@@ -16,7 +18,7 @@ public class Cliente extends Persona {
 		this.direccionResidencia = direccionResidencia;
 		this.tarjeta = tarjeta;
 		this.equipaje = equipaje;
-		
+
 	}
 	public Cliente() {
 		super();

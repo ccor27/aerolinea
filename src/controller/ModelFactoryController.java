@@ -1,5 +1,6 @@
 package controller;
 
+import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -44,7 +45,13 @@ public class ModelFactoryController {
 
 	public ModelFactoryController() {
 		caribeAirlines = new CaribeAirlines();
-		inicializarDatos();
+		try {
+			caribeAirlines = persistencia.cargarRecursoXMLAerolinea();
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		//inicializarDatos();
 	}
 
 	private void inicializarDatos() {
@@ -57,16 +64,21 @@ public class ModelFactoryController {
 	   Tarjeta t = new Tarjeta(TipoTarjeta.DEBITO, 1000000);
 	   Equipaje e = new Equipaje();
 	   Cliente c1 = new Cliente("1005085241", "x", "xxx","adsd.cpm", "xx","x",t,e);
-	   
-		
-		Aeronave aeronave1 = new Aeronave(TipoNave.AIRBUS_A320);
-		Aeronave aeronave2 = new Aeronave(TipoNave.AIRBUS_A330);
-		Aeronave aeronave3 = new Aeronave(TipoNave.BOEING_787);
-		
+
+
+		Aeronave aeronave1 = new Aeronave("123" ,TipoNave.AIRBUS_A320);
+		Aeronave aeronave2 = new Aeronave("124" , TipoNave.AIRBUS_A330);
+		Aeronave aeronave3 = new Aeronave("152" , TipoNave.BOEING_787);
+
+		caribeAirlines.getListaAeronaves().add(aeronave1);
+		caribeAirlines.getListaAeronaves().add(aeronave2);
+		caribeAirlines.getListaAeronaves().add(aeronave3);
+
 		Ruta ruta = new Ruta("cmdx","bogota");
-		
-		Vuelo vuelo = new Vuelo(aeronave1,ruta,TipoVuelo.INTERNACIONA);
-		
+
+		Vuelo vuelo = new Vuelo(aeronave1,ruta,TipoVuelo.INTERNACIONA, "15/10/2022");
+		caribeAirlines.getListaVuelos().add(vuelo);
+
 		Tiquete tiquete = new Tiquete(vuelo, TipoClase.ECONOMICA, "11-2-21", "12-3-22", c1);
 		c1.setTiquete(tiquete);
 		System.out.println(c1);
@@ -74,8 +86,26 @@ public class ModelFactoryController {
 		System.out.println(aeronave1);
 		System.out.println(aeronave2);
 		System.out.println(aeronave3);
-		
-		
+
+		Auxiliar auxiliar = new Auxiliar("123459","santiago", "xxx", "persona@gmail.com","bachiller");
+		Auxiliar auxiliar1 = new Auxiliar("456165","camila", "xxx", "persona@gmail.com","bachiller");
+		Auxiliar auxiliar2 = new Auxiliar("98762","juliana", "xxx", "persona@gmail.com","bachiller");
+		Auxiliar auxiliar3 = new Auxiliar("3315648","carlos", "xxx", "persona@gmail.com","bachiller");
+		Auxiliar auxiliar4 = new Auxiliar("56123","yeferson", "xxx", "persona@gmail.com","bachiller");
+		Auxiliar auxiliar5 = new Auxiliar("87166","francisco", "xxx", "persona@gmail.com","bachiller");
+		Auxiliar auxiliar6 = new Auxiliar("45981","camilo", "xxx", "persona@gmail.com","bachiller");
+
+		caribeAirlines.getListaAuxiliares().add(auxiliar1);
+		caribeAirlines.getListaAuxiliares().add(auxiliar2);
+		caribeAirlines.getListaAuxiliares().add(auxiliar3);
+		caribeAirlines.getListaAuxiliares().add(auxiliar5);
+		caribeAirlines.getListaAuxiliares().add(auxiliar4);
+		caribeAirlines.getListaAuxiliares().add(auxiliar6);
+		caribeAirlines.getListaAuxiliares().add(auxiliar);
+
+		System.out.println(caribeAirlines.agregarCopiloto("5615615", "juan", "armenia", "juan@gmail.com", "aviacion"));
+
+
 	/*	Set<Piloto> listaPilotos = new HashSet<Piloto>();
 		Piloto piloto = new Piloto("10013698", "cristian", "osorio", "cris@gmail.com", "bachiller, aviacion en la universidad del quindio");
 	//	caribeAirlines.getListaPilotos().add(piloto);
@@ -112,9 +142,17 @@ public class ModelFactoryController {
 			e.printStackTrace();
 		}*/
 
+		try {
+			persistencia.guardarRecursoXMLAerolinea(caribeAirlines);
+
+			//caribeAirlines = persistencia.cargarRecursoXMLAerolinea();
+		} catch (Exception e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		}
 	}
 
-	
+
 	public CaribeAirlines getCaribeAirlines() {
 		return caribeAirlines;
 	}
@@ -125,11 +163,14 @@ public class ModelFactoryController {
 
 	public boolean comprarTiquete(Vuelo vuelo, TipoClase tipoClase, String fechaInicio,
 			String fechaRegreso, Cliente cliente){
-  
+
 		return caribeAirlines.comprarTiquete(vuelo, tipoClase, fechaInicio, fechaRegreso, cliente);
 	}
-	public void asignarTripulacion( Piloto piloto, CoPiloto coPiloto, Set<Auxiliar> listaAuxiliares , String codigoAeronave){
-		caribeAirlines.asignarTripulacion( piloto, coPiloto, listaAuxiliares, codigoAeronave);
+	public void asignarTripulacion( Piloto piloto, CoPiloto coPiloto, Set<Auxiliar> listaAuxiliares , Aeronave aeronave){
+		caribeAirlines.asignarTripulacion( piloto, coPiloto, listaAuxiliares, aeronave);
 	}
-	
+
+	public ArrayList<Vuelo> buscarVuelos(String fecha){
+		return caribeAirlines.buscarVuelos(fecha);
+	}
 }

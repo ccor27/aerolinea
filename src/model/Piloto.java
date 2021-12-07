@@ -2,6 +2,7 @@ package model;
 
 public class Piloto extends Persona {
 
+	private static final long serialVersionUID = 1L;
 
 	private String estudiosRealizados;
 
@@ -18,7 +19,7 @@ public class Piloto extends Persona {
 		this.estudiosRealizados = estudiosRealizados;
 	}
 
-   
+
 
 	//gets y sets
 	public String getEstudiosRealizados() {
@@ -29,6 +30,6 @@ public class Piloto extends Persona {
 		this.estudiosRealizados = estudiosRealizados;
 	}
 
-	
+
 
 }

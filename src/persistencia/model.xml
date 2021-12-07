@@ -1,0 +1,678 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<java version="1.8.0_311" class="java.beans.XMLDecoder">
+ <object class="model.CaribeAirlines" id="CaribeAirlines0">
+  <void property="listaAeronaves">
+   <void method="add">
+    <object class="model.Aeronave" id="Aeronave0">
+     <void property="capacidadKg">
+      <double>19000.0</double>
+     </void>
+     <void property="codigo">
+      <string>123</string>
+     </void>
+     <void property="numEconnomicos">
+      <int>138</int>
+     </void>
+     <void property="numEjecutivos">
+      <int>12</int>
+     </void>
+     <void property="numeroPasajeros">
+      <int>150</int>
+     </void>
+     <void property="puestosEconomicos">
+      <array class="[Lmodel.Silla;" length="23">
+       <void index="0">
+        <array class="model.Silla" length="6"/>
+       </void>
+       <void index="1">
+        <array class="model.Silla" length="6"/>
+       </void>
+       <void index="2">
+        <array class="model.Silla" length="6"/>
+       </void>
+       <void index="3">
+        <array class="model.Silla" length="6"/>
+       </void>
+       <void index="4">
+        <array class="model.Silla" length="6"/>
+       </void>
+       <void index="5">
+        <array class="model.Silla" length="6"/>
+       </void>
+       <void index="6">
+        <array class="model.Silla" length="6"/>
+       </void>
+       <void index="7">
+        <array class="model.Silla" length="6"/>
+       </void>
+       <void index="8">
+        <array class="model.Silla" length="6"/>
+       </void>
+       <void index="9">
+        <array class="model.Silla" length="6"/>
+       </void>
+       <void index="10">
+        <array class="model.Silla" length="6"/>
+       </void>
+       <void index="11">
+        <array class="model.Silla" length="6"/>
+       </void>
+       <void index="12">
+        <array class="model.Silla" length="6"/>
+       </void>
+       <void index="13">
+        <array class="model.Silla" length="6"/>
+       </void>
+       <void index="14">
+        <array class="model.Silla" length="6"/>
+       </void>
+       <void index="15">
+        <array class="model.Silla" length="6"/>
+       </void>
+       <void index="16">
+        <array class="model.Silla" length="6"/>
+       </void>
+       <void index="17">
+        <array class="model.Silla" length="6"/>
+       </void>
+       <void index="18">
+        <array class="model.Silla" length="6"/>
+       </void>
+       <void index="19">
+        <array class="model.Silla" length="6"/>
+       </void>
+       <void index="20">
+        <array class="model.Silla" length="6"/>
+       </void>
+       <void index="21">
+        <array class="model.Silla" length="6"/>
+       </void>
+       <void index="22">
+        <array class="model.Silla" length="6"/>
+       </void>
+      </array>
+     </void>
+     <void property="puestosEjecutivos">
+      <array class="[Lmodel.Silla;" length="6">
+       <void index="0">
+        <array class="model.Silla" length="6"/>
+       </void>
+       <void index="1">
+        <array class="model.Silla" length="6"/>
+       </void>
+       <void index="2">
+        <array class="model.Silla" length="6"/>
+       </void>
+       <void index="3">
+        <array class="model.Silla" length="6"/>
+       </void>
+       <void index="4">
+        <array class="model.Silla" length="6"/>
+       </void>
+       <void index="5">
+        <array class="model.Silla" length="6"/>
+       </void>
+      </array>
+     </void>
+     <void property="tipoNave">
+      <object class="java.lang.Enum" method="valueOf">
+       <class>model.TipoNave</class>
+       <string>AIRBUS_A320</string>
+      </object>
+     </void>
+    </object>
+   </void>
+   <void method="add">
+    <object class="model.Aeronave">
+     <void property="capacidadKg">
+      <double>52000.0</double>
+     </void>
+     <void property="codigo">
+      <string>124</string>
+     </void>
+     <void property="numEconnomicos">
+      <int>222</int>
+     </void>
+     <void property="numEjecutivos">
+      <int>30</int>
+     </void>
+     <void property="numeroPasajeros">
+      <int>252</int>
+     </void>
+     <void property="puestosEconomicos">
+      <array class="[Lmodel.Silla;" length="37">
+       <void index="0">
+        <array class="model.Silla" length="6"/>
+       </void>
+       <void index="1">
+        <array class="model.Silla" length="6"/>
+       </void>
+       <void index="2">
+        <array class="model.Silla" length="6"/>
+       </void>
+       <void index="3">
+        <array class="model.Silla" length="6"/>
+       </void>
+       <void index="4">
+        <array class="model.Silla" length="6"/>
+       </void>
+       <void index="5">
+        <array class="model.Silla" length="6"/>
+       </void>
+       <void index="6">
+        <array class="model.Silla" length="6"/>
+       </void>
+       <void index="7">
+        <array class="model.Silla" length="6"/>
+       </void>
+       <void index="8">
+        <array class="model.Silla" length="6"/>
+       </void>
+       <void index="9">
+        <array class="model.Silla" length="6"/>
+       </void>
+       <void index="10">
+        <array class="model.Silla" length="6"/>
+       </void>
+       <void index="11">
+        <array class="model.Silla" length="6"/>
+       </void>
+       <void index="12">
+        <array class="model.Silla" length="6"/>
+       </void>
+       <void index="13">
+        <array class="model.Silla" length="6"/>
+       </void>
+       <void index="14">
+        <array class="model.Silla" length="6"/>
+       </void>
+       <void index="15">
+        <array class="model.Silla" length="6"/>
+       </void>
+       <void index="16">
+        <array class="model.Silla" length="6"/>
+       </void>
+       <void index="17">
+        <array class="model.Silla" length="6"/>
+       </void>
+       <void index="18">
+        <array class="model.Silla" length="6"/>
+       </void>
+       <void index="19">
+        <array class="model.Silla" length="6"/>
+       </void>
+       <void index="20">
+        <array class="model.Silla" length="6"/>
+       </void>
+       <void index="21">
+        <array class="model.Silla" length="6"/>
+       </void>
+       <void index="22">
+        <array class="model.Silla" length="6"/>
+       </void>
+       <void index="23">
+        <array class="model.Silla" length="6"/>
+       </void>
+       <void index="24">
+        <array class="model.Silla" length="6"/>
+       </void>
+       <void index="25">
+        <array class="model.Silla" length="6"/>
+       </void>
+       <void index="26">
+        <array class="model.Silla" length="6"/>
+       </void>
+       <void index="27">
+        <array class="model.Silla" length="6"/>
+       </void>
+       <void index="28">
+        <array class="model.Silla" length="6"/>
+       </void>
+       <void index="29">
+        <array class="model.Silla" length="6"/>
+       </void>
+       <void index="30">
+        <array class="model.Silla" length="6"/>
+       </void>
+       <void index="31">
+        <array class="model.Silla" length="6"/>
+       </void>
+       <void index="32">
+        <array class="model.Silla" length="6"/>
+       </void>
+       <void index="33">
+        <array class="model.Silla" length="6"/>
+       </void>
+       <void index="34">
+        <array class="model.Silla" length="6"/>
+       </void>
+       <void index="35">
+        <array class="model.Silla" length="6"/>
+       </void>
+       <void index="36">
+        <array class="model.Silla" length="6"/>
+       </void>
+      </array>
+     </void>
+     <void property="puestosEjecutivos">
+      <array class="[Lmodel.Silla;" length="6">
+       <void index="0">
+        <array class="model.Silla" length="5"/>
+       </void>
+       <void index="1">
+        <array class="model.Silla" length="5"/>
+       </void>
+       <void index="2">
+        <array class="model.Silla" length="5"/>
+       </void>
+       <void index="3">
+        <array class="model.Silla" length="5"/>
+       </void>
+       <void index="4">
+        <array class="model.Silla" length="5"/>
+       </void>
+       <void index="5">
+        <array class="model.Silla" length="5"/>
+       </void>
+      </array>
+     </void>
+     <void property="tipoNave">
+      <object class="java.lang.Enum" method="valueOf">
+       <class>model.TipoNave</class>
+       <string>AIRBUS_A330</string>
+      </object>
+     </void>
+    </object>
+   </void>
+   <void method="add">
+    <object class="model.Aeronave">
+     <void property="capacidadKg">
+      <double>50000.0</double>
+     </void>
+     <void property="codigo">
+      <string>152</string>
+     </void>
+     <void property="numEconnomicos">
+      <int>222</int>
+     </void>
+     <void property="numEjecutivos">
+      <int>28</int>
+     </void>
+     <void property="numeroPasajeros">
+      <int>250</int>
+     </void>
+     <void property="puestosEconomicos">
+      <array class="[Lmodel.Silla;" length="37">
+       <void index="0">
+        <array class="model.Silla" length="6"/>
+       </void>
+       <void index="1">
+        <array class="model.Silla" length="6"/>
+       </void>
+       <void index="2">
+        <array class="model.Silla" length="6"/>
+       </void>
+       <void index="3">
+        <array class="model.Silla" length="6"/>
+       </void>
+       <void index="4">
+        <array class="model.Silla" length="6"/>
+       </void>
+       <void index="5">
+        <array class="model.Silla" length="6"/>
+       </void>
+       <void index="6">
+        <array class="model.Silla" length="6"/>
+       </void>
+       <void index="7">
+        <array class="model.Silla" length="6"/>
+       </void>
+       <void index="8">
+        <array class="model.Silla" length="6"/>
+       </void>
+       <void index="9">
+        <array class="model.Silla" length="6"/>
+       </void>
+       <void index="10">
+        <array class="model.Silla" length="6"/>
+       </void>
+       <void index="11">
+        <array class="model.Silla" length="6"/>
+       </void>
+       <void index="12">
+        <array class="model.Silla" length="6"/>
+       </void>
+       <void index="13">
+        <array class="model.Silla" length="6"/>
+       </void>
+       <void index="14">
+        <array class="model.Silla" length="6"/>
+       </void>
+       <void index="15">
+        <array class="model.Silla" length="6"/>
+       </void>
+       <void index="16">
+        <array class="model.Silla" length="6"/>
+       </void>
+       <void index="17">
+        <array class="model.Silla" length="6"/>
+       </void>
+       <void index="18">
+        <array class="model.Silla" length="6"/>
+       </void>
+       <void index="19">
+        <array class="model.Silla" length="6"/>
+       </void>
+       <void index="20">
+        <array class="model.Silla" length="6"/>
+       </void>
+       <void index="21">
+        <array class="model.Silla" length="6"/>
+       </void>
+       <void index="22">
+        <array class="model.Silla" length="6"/>
+       </void>
+       <void index="23">
+        <array class="model.Silla" length="6"/>
+       </void>
+       <void index="24">
+        <array class="model.Silla" length="6"/>
+       </void>
+       <void index="25">
+        <array class="model.Silla" length="6"/>
+       </void>
+       <void index="26">
+        <array class="model.Silla" length="6"/>
+       </void>
+       <void index="27">
+        <array class="model.Silla" length="6"/>
+       </void>
+       <void index="28">
+        <array class="model.Silla" length="6"/>
+       </void>
+       <void index="29">
+        <array class="model.Silla" length="6"/>
+       </void>
+       <void index="30">
+        <array class="model.Silla" length="6"/>
+       </void>
+       <void index="31">
+        <array class="model.Silla" length="6"/>
+       </void>
+       <void index="32">
+        <array class="model.Silla" length="6"/>
+       </void>
+       <void index="33">
+        <array class="model.Silla" length="6"/>
+       </void>
+       <void index="34">
+        <array class="model.Silla" length="6"/>
+       </void>
+       <void index="35">
+        <array class="model.Silla" length="6"/>
+       </void>
+       <void index="36">
+        <array class="model.Silla" length="6"/>
+       </void>
+      </array>
+     </void>
+     <void property="puestosEjecutivos">
+      <array class="[Lmodel.Silla;" length="7">
+       <void index="0">
+        <array class="model.Silla" length="4"/>
+       </void>
+       <void index="1">
+        <array class="model.Silla" length="4"/>
+       </void>
+       <void index="2">
+        <array class="model.Silla" length="4"/>
+       </void>
+       <void index="3">
+        <array class="model.Silla" length="4"/>
+       </void>
+       <void index="4">
+        <array class="model.Silla" length="4"/>
+       </void>
+       <void index="5">
+        <array class="model.Silla" length="4"/>
+       </void>
+       <void index="6">
+        <array class="model.Silla" length="4"/>
+       </void>
+      </array>
+     </void>
+     <void property="tipoNave">
+      <object class="java.lang.Enum" method="valueOf">
+       <class>model.TipoNave</class>
+       <string>BOEING_787</string>
+      </object>
+     </void>
+    </object>
+   </void>
+  </void>
+  <void property="listaAuxiliares">
+   <void method="add">
+    <object class="model.Auxiliar">
+     <void property="correoElectronico">
+      <string>persona@gmail.com</string>
+     </void>
+     <void property="direccion">
+      <string>xxx</string>
+     </void>
+     <void property="estudiosRealizados">
+      <string>bachiller</string>
+     </void>
+     <void property="identificacion">
+      <string>123459</string>
+     </void>
+     <void property="nombre">
+      <string>santiago</string>
+     </void>
+    </object>
+   </void>
+   <void method="add">
+    <object class="model.Auxiliar">
+     <void property="correoElectronico">
+      <string>persona@gmail.com</string>
+     </void>
+     <void property="direccion">
+      <string>xxx</string>
+     </void>
+     <void property="estudiosRealizados">
+      <string>bachiller</string>
+     </void>
+     <void property="identificacion">
+      <string>3315648</string>
+     </void>
+     <void property="nombre">
+      <string>carlos</string>
+     </void>
+    </object>
+   </void>
+   <void method="add">
+    <object class="model.Auxiliar">
+     <void property="correoElectronico">
+      <string>persona@gmail.com</string>
+     </void>
+     <void property="direccion">
+      <string>xxx</string>
+     </void>
+     <void property="estudiosRealizados">
+      <string>bachiller</string>
+     </void>
+     <void property="identificacion">
+      <string>456165</string>
+     </void>
+     <void property="nombre">
+      <string>camila</string>
+     </void>
+    </object>
+   </void>
+   <void method="add">
+    <object class="model.Auxiliar">
+     <void property="correoElectronico">
+      <string>persona@gmail.com</string>
+     </void>
+     <void property="direccion">
+      <string>xxx</string>
+     </void>
+     <void property="estudiosRealizados">
+      <string>bachiller</string>
+     </void>
+     <void property="identificacion">
+      <string>45981</string>
+     </void>
+     <void property="nombre">
+      <string>camilo</string>
+     </void>
+    </object>
+   </void>
+   <void method="add">
+    <object class="model.Auxiliar">
+     <void property="correoElectronico">
+      <string>persona@gmail.com</string>
+     </void>
+     <void property="direccion">
+      <string>xxx</string>
+     </void>
+     <void property="estudiosRealizados">
+      <string>bachiller</string>
+     </void>
+     <void property="identificacion">
+      <string>56123</string>
+     </void>
+     <void property="nombre">
+      <string>yeferson</string>
+     </void>
+    </object>
+   </void>
+   <void method="add">
+    <object class="model.Auxiliar">
+     <void property="correoElectronico">
+      <string>persona@gmail.com</string>
+     </void>
+     <void property="direccion">
+      <string>xxx</string>
+     </void>
+     <void property="estudiosRealizados">
+      <string>bachiller</string>
+     </void>
+     <void property="identificacion">
+      <string>87166</string>
+     </void>
+     <void property="nombre">
+      <string>francisco</string>
+     </void>
+    </object>
+   </void>
+   <void method="add">
+    <object class="model.Auxiliar">
+     <void property="correoElectronico">
+      <string>persona@gmail.com</string>
+     </void>
+     <void property="direccion">
+      <string>xxx</string>
+     </void>
+     <void property="estudiosRealizados">
+      <string>bachiller</string>
+     </void>
+     <void property="identificacion">
+      <string>98762</string>
+     </void>
+     <void property="nombre">
+      <string>juliana</string>
+     </void>
+    </object>
+   </void>
+  </void>
+  <void property="listaCoPilotos">
+   <void method="add">
+    <object class="model.CoPiloto">
+     <void property="correoElectronico">
+      <string>juan@gmail.com</string>
+     </void>
+     <void property="direccion">
+      <string>armenia</string>
+     </void>
+     <void property="estudiosRealizados">
+      <string>aviacion</string>
+     </void>
+     <void property="identificacion">
+      <string>5615615</string>
+     </void>
+     <void property="nombre">
+      <string>juan</string>
+     </void>
+    </object>
+   </void>
+  </void>
+  <void property="listaPilotos">
+   <void method="add">
+    <object class="model.Piloto">
+     <void property="correoElectronico">
+      <string>cris@gmail.com</string>
+     </void>
+     <void property="direccion">
+      <string>osorio</string>
+     </void>
+     <void property="estudiosRealizados">
+      <string>bachiller, aviacion en la universidad del quindio</string>
+     </void>
+     <void property="identificacion">
+      <string>10013698</string>
+     </void>
+     <void property="nombre">
+      <string>cristian</string>
+     </void>
+    </object>
+   </void>
+   <void method="add">
+    <object class="model.Piloto">
+     <void property="correoElectronico">
+      <string>zuluaga@gmail.com</string>
+     </void>
+     <void property="direccion">
+      <string>zuluaga</string>
+     </void>
+     <void property="estudiosRealizados">
+      <string>bachiller, aviacion , medico</string>
+     </void>
+     <void property="identificacion">
+      <string>11365897</string>
+     </void>
+     <void property="nombre">
+      <string>yeferson</string>
+     </void>
+    </object>
+   </void>
+  </void>
+  <void property="listaVuelos">
+   <void method="add">
+    <object class="model.Vuelo">
+     <void property="fechaSalida">
+      <string>15/10/2022</string>
+     </void>
+     <void property="nave">
+      <object idref="Aeronave0"/>
+     </void>
+     <void property="ruta">
+      <object class="model.Ruta">
+       <void property="destino">
+        <string>bogota</string>
+       </void>
+       <void property="origen">
+        <string>cmdx</string>
+       </void>
+      </object>
+     </void>
+     <void property="tipoVuelo">
+      <object class="java.lang.Enum" method="valueOf">
+       <class>model.TipoVuelo</class>
+       <string>INTERNACIONA</string>
+      </object>
+     </void>
+    </object>
+   </void>
+  </void>
+ </object>
+</java>
